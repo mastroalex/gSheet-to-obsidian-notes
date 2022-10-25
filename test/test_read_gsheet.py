@@ -54,10 +54,10 @@ def fileHeader(date,exerciseType,SxR,reps,weigth):
     S5="S5::"+str(reps[4])+" \n"
     W5="W5::"+str(weigth[4])+"\n"
     weigthNum=[float(x.replace(',', '.')) for x in weigth]
-    std="std::"+str(np.std(weigthNum[weigthNum!=0]))+"\n"
+    std="std::"+str(np.std(weigthNum))+"\n"
     maxWeigth="max::"+str(np.nanmax(weigthNum))+"\n"
     minWeigth="min::"+str(np.nanmin(weigthNum))+"\n"
-    meanWeigth="mean::"+str(np.nanmin(weigthNum))+"\n"
+    meanWeigth="mean::"+str(np.nanmean(weigthNum))+"\n"
 
     header=header+datestring+exerciseName+SxR_string+S1+W1+S2+W2+S3+W3+S4+W4+S5+W5+maxWeigth+minWeigth+meanWeigth+std
     header=header+'---\n'
