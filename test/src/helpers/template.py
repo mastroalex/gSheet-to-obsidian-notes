@@ -83,7 +83,7 @@ def fileHeader(date,exerciseType,SxR,reps,weigth):
 def createWorkout(date,dayType,exerciseType,SxR,reps,weigth):
     header=("---\n"
     "type::workout \n")
-    datestring="date::[["+str(date)+"]] \n dateNoLink::"+str(date)+" \n"
+    datestring="date::[["+str(date)+"]] \ndateNoLink::"+str(date)+" \n"
     dayTypeString="dayType::"+str(dayType)+" \n"
     header=header+datestring+dayTypeString+"cal:: \n"
     header=header+'---\n'

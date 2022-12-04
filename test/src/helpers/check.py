@@ -4,6 +4,7 @@ from datetime import datetime
 def checkOS():
     if platform == "linux" or platform == "linux2":
     # linux
+        # not implemented
         return
     elif platform == "darwin":
     # OS X
