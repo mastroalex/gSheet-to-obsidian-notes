@@ -2,11 +2,11 @@
 
 The following script allows us to convert a Google Sheet file to Obsidian markdown including `dataview`/`dataviewjs` syntax to query files and plot charts and tables.
 
-## Requirements
+## Requirements
 
 It needs the configuration of `gspread` module and to set the path of the `.json` key in `/src/helpers/check.py` in `giveServicePath()` function. 
 
-## Usage
+## Usage
 
 ```bash
 /python3 /path/to/folder/main.py
