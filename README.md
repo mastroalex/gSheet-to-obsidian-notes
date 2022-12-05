@@ -18,7 +18,7 @@ Or filtering data with the starting date:
 python3 /path/to/folder/main.py dd/mm/yyyy
 ```
 
-## Descriptions
+## Description
 
 For a complete description see [Google Sheets and Obsidian integration](https://alessandromastrofini.it/en/google-sheets-obsidian-integration/). 
 
