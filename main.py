@@ -4,7 +4,6 @@ import src.helpers.writer as wr
 import gspread
 from datetime import datetime, timedelta
 import os
-
 import sys 
 
 myos = ch.checkOS() #check file system
@@ -18,7 +17,6 @@ data=wks.get_all_values()
 
 
 def main(argv):
-    
     if len(argv) < 1:
         # subtract one day from today
         inputdate = datetime.today() - timedelta(days=1)
