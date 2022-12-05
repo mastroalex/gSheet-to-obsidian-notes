@@ -32,6 +32,7 @@ if ch.validateDate(inputdate): #check the input
             for j in range(len(data[i])):
                 # clean empty cells substituing with a NaN
                 if data[i][j]=='':
+                    # it is important to avoid empty cell for mean, std and charts
                     data[i][j]='nan'
             # convert date format        
             dateValue=datetime.strptime(data[i][0], '%d/%m/%Y').date()
@@ -50,15 +51,21 @@ if ch.validateDate(inputdate): #check the input
                 head=tmp.fileHeader(dateValue,exerciseType,SxR,reps,weigth)
                 #print(head)
                 if i==0:
+                    # set index to zero when new day starts
+                    # index represents the exercise inside the same training day
                     index=0
                 if i>0:
                     if data[i][0]==data[i-1][0]:
-                    # check for new training day and increment index
+                        # if the date is the same of the previous cell
+                        # we are in the same training day, so we need to
+                        # increment the exercise index
+                        # check for new exercise and increment index
                         index=index+1
                     else:
                         # enter in a new day --> reset index --> fill the template
                         index=0
-                        # file name and path
+                        # file name and path with the following structure:
+                        # workout/date/workout_data .md
                         WorkoutCurrentFilePath=Path(exercisePath+"/"+str(dateValue)+"/workout_"+str(dateValue)+".md")
                         # create daily directory in Obsidan/Workout/new_day
                         os.makedirs(os.path.dirname(WorkoutCurrentFilePath), exist_ok=True)
@@ -68,8 +75,9 @@ if ch.validateDate(inputdate): #check the input
                         with open(WorkoutCurrentFilePath,'w') as f:
                             f.write(workoutText)
                 
+                # file name and path with the following structure:
+                # /date/date_index .md
                 currentFilePath=Path(exercisePath+"/"+str(dateValue)+"/"+str(dateValue)+"_"+str(index)+".md")
-                #print(currentFilePath)
                 os.makedirs(os.path.dirname(currentFilePath), exist_ok=True)
                 # write exercise
                 with open(currentFilePath,'w') as f:
