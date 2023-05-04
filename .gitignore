@@ -1,3 +1,7 @@
 test/src/helpers/__pycache__/*
 test/src/helpers/__pycache__/check.cpython-39.pyc
 test/src/helpers/__pycache__/template.cpython-39.pyc
+src/helpers/__pycache__/__init__.cpython-310.pyc
+src/helpers/__pycache__/check.cpython-310.pyc
+src/helpers/__pycache__/template.cpython-310.pyc
+src/helpers/__pycache__/writer.cpython-310.pyc
