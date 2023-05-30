@@ -30,7 +30,7 @@ def main(argv):
     if ch.validateDate(inputdate): #check the input
         wr.writeFiles(inputdate,data)
     else:
-        print(f"Wrong input. You insert: \"{inputdate}\"")
+        print(f"Wrong input (needs dd/mm/yyyy format). You insert: \"{inputdate}\"")
 
 
 if __name__ == "__main__":
