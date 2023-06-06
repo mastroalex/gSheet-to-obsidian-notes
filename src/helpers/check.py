@@ -18,7 +18,7 @@ def checkOS():
 
 def giveServicePath(os):
     if os=="W":
-        servicePath="%APPDATA%\gspread\service_account.json"    
+        servicePath="C:/Users/bigba/%APPDATA%/gspread/service_account.json"    
     elif os=="M":
         servicePath="/Users/alessandromastrofini/Documents/jsonUsefullForObsidian/service_account.json"
     else:
