@@ -14,7 +14,7 @@ def myPath(myos):
         filename=os.path.basename(__file__)
         path=os.path.abspath(__file__)
         mainfolderPath=path.replace(filename,"")
-        obsidianPath='/Users/alessandromastrofini/Obsidian/Ale'
+        obsidianPath='/Users/alessandromastrofini/ObsidianLocal/Ale'
     exercisePath=obsidianPath+'/Workout'
     
     return filename,path,mainfolderPath,obsidianPath,exercisePath
